@@ -1,0 +1,39 @@
+<style>
+    .offcanvas {
+        padding: 30px;
+        border-left: 5px solid var(--color-dark) !important;
+    }
+    .offcanvas .navbar-brand {
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--color-dark);
+    }
+    .offcanvas .re-btn-register {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+        border: 0px;
+        border-radius: 0px;
+        margin-bottom: 15px;
+    }
+    .offcanvas .re-btn-login {
+        background-color: var(--color-tomato);
+        color: var(--color-white);
+        border: 0px;
+        border-radius: 0px;
+    }
+</style>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="mobile" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <a class="navbar-brand" href="/">
+            <img src="http://localhost:5000/icon/brand.svg" alt="">
+        </a>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="navbar-nav ms-auto">
+            <a class="btn btn-lg re-btn-register" href="/register">Criar uma conta</a>
+            <a class="btn btn-lg re-btn-login" href="/login">Login</a>
+        </div>
+    </div>
+</div>
+<script></script>

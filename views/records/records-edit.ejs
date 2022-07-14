@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- title %> </title>
+    <link rel="shortcut icon" href="http://localhost:5000/icon/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="http://localhost:5000/css/style.css">
+    <link rel="stylesheet" href="http://localhost:5000/css/bootstrap.css">
+    <style>
+        .re-records-content {
+            width: 100%;
+            height: calc(100vh - 155px);
+            display: flex;
+        }
+        .re-records-content h2 {
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+        .re-records-content-form {
+            width: 75%;
+            margin: 0 auto;
+        }
+        .re-records-content-form input[type="text"] {
+            border-radius: 5px;
+            outline: none !important;
+        }
+        .re-records-content-form input[type="password"] {
+            border-radius: 5px;
+            outline: none !important;
+        }
+        .re-records-content-form input[type="date"] {
+            border-radius: 5px;
+            outline: none !important;
+        }
+        .re-records-content-form input[type="number"] {
+            border-radius: 5px;
+            outline: none !important;
+        }
+        .re-records-content-form ::placeholder {
+            font-size: 18px;
+        }
+        .re-records-content-form button {
+            background-color: var(--color-dark);
+            border-radius: 5px;
+            color: var(--color-white);
+        }
+        .re-records-content-form button:hover {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+        }
+        .re-btn {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            border-radius: 0px;
+        }
+        .re-btn:hover {
+            background-color: var(--color-tomato);
+            border: 0px;
+            color: var(--color-white);
+            transition: 0.8s;
+        }
+        @media (max-width: 575.98px) {}
+        @media (max-width: 767.98px) {}
+        @media (max-width: 991.98px) {
+            .re-records-content-form {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 1199.98px) {}
+        @media (max-width: 1399.98px) {}
+    </style>
+</head>
+<body>
+    <%- include('../partials/navigation-dashboard'); %>
+    <section class="re-records-content pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <form action="/customers/update" method="post" class="row g-3">
+                        <div class="col-md-6">
+                            <label for="fullname" class="form-label">Nome</label>
+                            <input type="text" class="form-control form-control-lg rounded-0" name="fullname" id="fullname" value="<%=user.fullname%> ">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="text" class="form-control form-control-lg rounded-0" name="cpf" id="cpf" value="<%=user.cpf%> ">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="apartment" class="form-label">Apartamento</label>
+                            <input type="text" class="form-control form-control-lg rounded-0" name="apartment" id="apartment" value="<%=user.apartment%>">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="fone" class="form-label">Telefone</label>
+                            <input type="tel" class="form-control form-control-lg rounded-0" name="fone" id="fone" value="<%=user.fone%>">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="birthday" class="form-label">Data de Nascimento</label>
+                            <input type="date" class="form-control form-control-lg rounded-0" name="birthday" id="birthday" value="<%=user.birthday%>">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="box" class="form-label">Código</label>
+                            <input type="text" class="form-control form-control-lg rounded-0" value="<%=user.code%>">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="brand" class="form-label">Marca</label>
+                            <input type="text" class="form-control form-control-lg rounded-0" name="brand" id="brand" value="<%=user.brand%>">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="model" class="form-label">Modelo</label>
+                            <input type="text" class="form-control form-control-lg rounded-0" name="model" id="model" value="<%=user.model%>">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="board" class="form-label">Placa</label>
+                            <input type="text" class="form-control form-control-lg rounded-0" name="board" id="board" value="<%=user.board%>">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="year" class="form-label">Ano</label>
+                            <input type="text" class="form-control form-control-lg rounded-0" name="year" id="year" value="<%=user.year%>">
+                        </div>
+                        <input type="hidden" name="id" value="<%=user.id%>">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-lg re-btn rounded-0">Atualizar</button>
+                            <a href="/customers" class="btn btn-lg re-btn rounded-0">Lista de clientes</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <%- include('../partials/footer'); %> 
+</body>
+</html>

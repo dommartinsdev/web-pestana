@@ -1,0 +1,90 @@
+<style>
+    .re-login-content {
+        width: 100%;
+        height: calc(100vh - 155px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .re-login-content h2 {
+        font-weight: 600;
+        margin-bottom: 3px;
+    }
+    .re-login-content-form {
+        width: 40%;
+        margin: 0 auto;
+    }
+    .re-login-content-form input[type="text"]{
+        border-radius: 0px;
+        outline: none !important;
+    }
+    .re-login-content-form input[type="password"]{
+        border-radius: 0px;
+        outline: none !important;
+    }
+    .re-login-content-form ::placeholder {
+        font-size: 16px;
+    }
+    .re-login-content-form button {
+        background-color: var(--color-dark);
+        border-radius: 0px;
+        color: var(--color-white);
+    }
+    .re-login-content-form button:hover {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+    }
+    .re-alert {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+        border-radius: 0px;
+    }
+    .btn-close {
+        background-image: url('http://localhost:5000/icon/icon-close.svg');
+        opacity: 1;
+    }
+    @media (max-width: 575.98px) {}
+    @media (max-width: 767.98px) {}
+    @media (max-width: 991.98px) {
+        .re-login-content-form {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+    @media (max-width: 1199.98px) {}
+    @media (max-width: 1399.98px) {}
+</style>
+<section class="re-login-content">
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-lg-12 text-center">
+                <h2>Login</h2>
+                <p>Bem-vindo ao sistema Pestana.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form action="/login" method="post" class="re-login-content-form needs-validation" novalidate>
+                    <div class="mb-3">
+                        <input type="text" class="form-control form-control-lg " id="user" name="user" placeholder="Informe seu usuário..." required>
+                        <div class="valid-feedback">Muito bem!</div>
+                        <div class="invalid-feedback">Informe seu usuário.</div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Informe sua senha..." required>
+                        <div class="valid-feedback">Muito bem!</div>
+                        <div class="invalid-feedback">Informe sua senha.</div>
+                    </div>
+                    <button type="submit" class="btn btn-lg mb-3 w-100">Logar</button>
+                </form>
+                <% if(message){ %>
+                    <div class="alert re-alert alert-dismissible fade show rounded-0 mt-3" role="alert">
+                        <%=message%> 
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</section>
+<script></script>

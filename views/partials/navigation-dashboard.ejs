@@ -1,0 +1,43 @@
+<style>
+    .re-navigation-dashboard .navbar-brand {
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--color-dark);
+    }
+    .re-navigation-dashboard .nav-link {
+        font-size: 20px;
+    }
+    .re-navigation-dashboard .re-btn-logout {
+        background-color: var(--color-tomato);
+        color: var(--color-white);
+        border: 0px;
+        border-radius: 5px;
+    }
+    .re-navigation-dashboard .re-btn-user {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+        border: 0px;
+        border-radius: 5px;
+    }
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3 re-navigation-dashboard">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="http://localhost:5000/icon/brand.svg" alt="">
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobile" aria-controls="offcanvasRight">
+            <img src="http://localhost:5000/icon/icon-menu.svg">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/dashboard">Início</a>
+                <a class="nav-link" href="/records">Cadastro</a>
+                <a class="nav-link" href="/customers">Clientes</a>
+                <a class="btn btn-lg re-btn-logout rounded-0" href="/logout">Sair</a>
+                <a class="btn btn-lg re-btn-user rounded-0" href="#">Usuário: <%=userConnected%></a>
+            </div>
+        </div>
+    </div>
+</nav>
+<%- include('./navigation-mobile-dashboard'); %> 
+<script></script>

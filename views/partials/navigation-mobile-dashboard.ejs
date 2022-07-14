@@ -1,0 +1,46 @@
+<style>
+    .offcanvas {
+        padding: 30px;
+        border-left: 5px solid var(--color-dark) !important;
+    }
+
+    .offcanvas .navbar-brand {
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--color-dark);
+    }
+
+    .offcanvas .nav-link {
+        font-size: 20px;
+    }
+    .offcanvas .re-btn-logout {
+        background-color: var(--color-tomato);
+        color: var(--color-white);
+        border: 0px;
+        border-radius: 0px;
+    }
+    .offcanvas .re-btn-user {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+        border: 0px;
+        border-radius: 0px;
+    }
+</style>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="mobile" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <a class="navbar-brand" href="/">
+            <img src="http://localhost:5000/icon/brand.svg" alt="">
+        </a>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="/dashboard">Início</a>
+            <a class="nav-link" href="/records">Cadastro</a>
+            <a class="nav-link" href="/customers">Clientes</a>
+            <a class="btn btn-lg re-btn-logout" href="/logout">Sair</a>
+            <a class="btn btn-lg re-btn-user" href="#">Usuário: <%=userConnected%></a>
+        </div>
+    </div>
+</div>
+<script></script>

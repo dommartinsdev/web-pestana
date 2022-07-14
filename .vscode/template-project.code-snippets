@@ -1,0 +1,11 @@
+{
+	"template-project": {
+		"prefix": "template-project",
+		"body": [
+		  "<style></style>",
+		  "$1",
+		  "<script></script>"
+		],
+		"description": "template-project"
+	  }
+}
