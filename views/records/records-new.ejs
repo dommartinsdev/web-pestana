@@ -92,7 +92,7 @@
                 <form action="/customers/save" method="post" class="row g-3 needs-validation" novalidate>
                     <div class="col-md-4">
                         <label for="fullname" class="form-label">Nome</label>
-                        <input type="text" class="form-control form-control-lg rounded-0" name="fullname" id="fullname" required pattern="[a-zA-Z\s]+$">
+                        <input type="text" class="form-control form-control-lg rounded-0" name="fullname" id="fullname" required pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]{3,20}$">
                         <div class="valid-feedback">Muito bem!</div>
                         <div class="invalid-feedback">Informe um nome válido.</div>
                     </div>
@@ -125,30 +125,30 @@
                         <label for="box" class="form-label">Código</label>
                         <input type="text" class="form-control form-control-lg rounded-0" value="<%=codeRandom(1000,8000)%>" name="code">
                     </div>
-                    <div class="col-md-3">
+                    <!-- <div class="col-md-3">
                         <label for="brand" class="form-label">Marca</label>
                         <input type="text" class="form-control form-control-lg rounded-0" name="brand" id="brand" required pattern="[a-zA-Z\s]+$">
                         <div class="valid-feedback">Muito bem!</div>
                         <div class="invalid-feedback">Informe a marca do veículo.</div>
-                    </div>
-                    <div class="col-md-3">
+                    </div> -->
+                    <div class="col-md-4">
                         <label for="model" class="form-label">Modelo</label>
                         <input type="text" class="form-control form-control-lg rounded-0" name="model" id="model" required>
                         <div class="valid-feedback">Muito bem!</div>
                         <div class="invalid-feedback">Informe o modelo do veículo.</div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <label for="board" class="form-label">Placa</label>
                         <input type="text" class="form-control form-control-lg rounded-0" name="board" id="board" required>
                         <div class="valid-feedback">Muito bem!</div>
                         <div class="invalid-feedback">Informe a placa do veículo.</div>
                     </div>
-                    <div class="col-md-3">
+                    <!-- <div class="col-md-3">
                         <label for="year" class="form-label">Ano</label>
                         <input type="text" class="form-control form-control-lg rounded-0" name="year" id="year" required pattern="[0-9]+$">
                         <div class="valid-feedback">Muito bem!</div>
                         <div class="invalid-feedback">Informe o ano do veículo.</div>
-                    </div>
+                    </div> -->
                     
                     <div class="col-12">
                         <button type="submit" class="btn btn-lg re-btn rounded-0">Cadastrar</button>

@@ -17,9 +17,9 @@ const userSave = (req, res) => {
     let apartment = req.body.apartment;
     let fone = req.body.fone;
     let birthday = req.body.birthday;
-    let brand = req.body.brand;
+    /* let brand = req.body.brand; */
     let board = req.body.board;
-    let year = req.body.year;
+    /* let year = req.body.year; */
     let model = req.body.model;
     let userConnected = req.session.user.fullname;
 
@@ -37,9 +37,9 @@ const userSave = (req, res) => {
         apartment:apartment,
         fone:fone,
         birthday:birthday,
-        brand:brand,
+        /* brand:brand, */
         board:board,
-        year:year,
+        /* year:year, */
         model:model,
     }).then(
         res.render('records/records',{

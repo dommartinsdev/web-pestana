@@ -31,10 +31,10 @@ const Users = connectionDatabase.define('users', {
         type:Sequelize.DATEONLY,
         allowNull: false,
     },
-    brand:{
+    /* brand:{
         type:Sequelize.STRING,
         allowNull: false,
-    },
+    }, */
     model:{
         type:Sequelize.STRING,
         allowNull: false,
@@ -43,10 +43,10 @@ const Users = connectionDatabase.define('users', {
         type:Sequelize.STRING,
         allowNull: false,
     },
-    year:{
+   /*  year:{
         type:Sequelize.STRING,
         allowNull: false,
-    }
+    } */
 });
 
 (async () => {
