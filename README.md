@@ -14,9 +14,8 @@
 <p align="center">
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
     <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white">
-    <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge">
-    <img src="https://img.shields.io/badge/Umbler-430098?style=for-the-badge&logo=umbler&logoColor=white">
-   
+    <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge">  
+    <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white">  
 </p>
 <br/>
 <p align="center">
@@ -33,7 +32,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Node.js](https://nodejs.org/en/)
 - [Express](https://expressjs.com/pt-br/)
-- [Umbler](https://umbler.com/)
 
 ## 💻 Projeto
 
@@ -44,7 +42,7 @@ Realizar uma gestão eficiente de vagas de garagem de condomínios requer muito 
 - Clone o repositório.
 - Instale as dependências com `npm install`.
 - Criar banco de dados no Mysql Server com nome `db_pestana`;
-- Criar arquivo `.env` adicionar essas variáveis:
+- Criar arquivo `.env` na raiz do projeto, após isso adicionar essas variáveis:
     - DB_NAME=db_pestana
     - DB_USER='root'
     - DB_PASSWORD='03delend@#'
@@ -52,10 +50,6 @@ Realizar uma gestão eficiente de vagas de garagem de condomínios requer muito 
 - Inicie o servidor com `npm start`
 
 Agora você pode acessar [`localhost:5000`](http://localhost:5000) do seu navegador.
-
-## 🌐 Implementação na Umbler
-
-Acesse [`https://`](https://) do seu navegador.
 
 ## 📝 Licença
 
