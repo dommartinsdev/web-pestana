@@ -61,6 +61,17 @@
             color: var(--color-white);
             transition: 0.8s;
         }
+        .re-btn-delete {
+            background-color: var(--color-tomato);
+            color: var(--color-white);
+            border-radius: 0px;
+        }
+        .re-btn-delete:hover {
+            background-color: var(--color-dark);
+            border: 0px;
+            color: var(--color-white);
+            transition: 0.8s;
+        }
         @media (max-width: 575.98px) {}
         @media (max-width: 767.98px) {}
         @media (max-width: 991.98px) {
@@ -80,15 +91,15 @@
             <div class="row">
                 <div class="col-lg-12">
                     <form action="/customers/update" method="post" class="row g-3">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <label for="fullname" class="form-label">Nome</label>
                             <input type="text" class="form-control form-control-lg rounded-0" name="fullname" id="fullname" value="<%=user.fullname%> ">
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <label for="cpf" class="form-label">CPF</label>
                             <input type="text" class="form-control form-control-lg rounded-0" name="cpf" id="cpf" value="<%=user.cpf%> ">
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <label for="apartment" class="form-label">Apartamento</label>
                             <input type="text" class="form-control form-control-lg rounded-0" name="apartment" id="apartment" value="<%=user.apartment%>">
                         </div>
@@ -96,33 +107,36 @@
                             <label for="fone" class="form-label">Telefone</label>
                             <input type="tel" class="form-control form-control-lg rounded-0" name="fone" id="fone" value="<%=user.fone%>">
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <label for="birthday" class="form-label">Data de Nascimento</label>
                             <input type="date" class="form-control form-control-lg rounded-0" name="birthday" id="birthday" value="<%=user.birthday%>">
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <label for="box" class="form-label">Código</label>
                             <input type="text" class="form-control form-control-lg rounded-0" value="<%=user.code%>">
                         </div>
-                        <!-- <div class="col-md-3">
+                        <div class="col-md-3">
                             <label for="brand" class="form-label">Marca</label>
-                            <input type="text" class="form-control form-control-lg rounded-0" name="brand" id="brand" value="">
-                        </div> -->
+                            <input type="text" class="form-control form-control-lg rounded-0" name="brand" id="brand" value="<%=user.brand%>">
+                        </div>
                         <div class="col-md-4">
                             <label for="model" class="form-label">Modelo</label>
                             <input type="text" class="form-control form-control-lg rounded-0" name="model" id="model" value="<%=user.model%>">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <label for="board" class="form-label">Placa</label>
                             <input type="text" class="form-control form-control-lg rounded-0" name="board" id="board" value="<%=user.board%>">
                         </div>
-                        <!-- <div class="col-md-3">
+                        <div class="col-md-2">
                             <label for="year" class="form-label">Ano</label>
-                            <input type="text" class="form-control form-control-lg rounded-0" name="year" id="year" value="">
-                        </div> -->
+                            <input type="text" class="form-control form-control-lg rounded-0" name="year" id="year" value="<%=user.year%>">
+                        </div>
                         <input type="hidden" name="id" value="<%=user.id%>">
                         <div class="col-12">
                             <button type="submit" class="btn btn-lg re-btn rounded-0">Atualizar</button>
+                            <a href="/customers/delete/<%=user.id%>" class="btn btn-lg re-btn-delete rounded-0 text-center">
+                                Deletar
+                            </a>
                             <a href="/customers" class="btn btn-lg re-btn rounded-0">Lista de clientes</a>
                         </div>
                     </form>

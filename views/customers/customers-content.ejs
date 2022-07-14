@@ -42,9 +42,7 @@
                             <th scope="col">Box</th>
                             <th scope="col">Apartamento</th>
                             <th scope="col">Telefone</th>
-                            <th scope="col">Data de Nascimento</th>
-                            <th scope="col">Editar</th>
-                            <th scope="col">Deletar</th>
+                            <th scope="col">Visualizar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -58,15 +56,9 @@
                                 <td><%=user.id%></td>
                                 <td><%=user.apartment%></td>
                                 <td><%=user.fone%></td>
-                                <td><%=user.birthday%></td>
-                                <td>
+                                <td align="center">
                                     <a href="/customers/edit/<%=user.id%>">
-                                        <img src="http://localhost:5000/icon/icon-edit.svg" alt="">
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="/customers/delete/<%=user.id%>">
-                                        <img src="http://localhost:5000/icon/icon-delete.svg" alt="">
+                                        <img src="http://localhost:5000/icon/icon-view.svg" alt="">
                                     </a>
                                 </td>
                             </tr>
@@ -75,47 +67,6 @@
                 </table>
             </div>
         </div>
-       <!--  <div class="row pt-3">
-            <h5>Informações do veículo:</h5>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <table class="table re-table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Código</th>
-                            <th scope="col">Marca</th>
-                            <th scope="col">Modelo</th>
-                            <th scope="col">Placa</th>
-                            <th scope="col">Ano</th>
-                            <th scope="col">Editar</th>
-                            <th scope="col">Deletar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% users.forEach(function(user){  %>
-                            <tr>
-                                <td><%=user.code%></td>
-                                <td><%=user.brand%></td>
-                                <td><%=user.model%></td>
-                                <td><%=user.board%></td>
-                                <td><%=user.year%></td>
-                                <td>
-                                    <a href="/customers/edit/<%=user.id%>">
-                                        <img src="http://localhost:5000/icon/icon-edit.svg" alt="">
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="/customers/delete/<%=user.id%>">
-                                        <img src="http://localhost:5000/icon/icon-delete.svg" alt="">
-                                    </a>
-                                </td>
-                            </tr>
-                        <% }) %> 
-                    </tbody>
-                </table>
-            </div>
-        </div> -->
     </div>
 </section>
 <script></script>
