@@ -44,8 +44,8 @@ Realizar uma gestão eficiente de vagas de garagem de condomínios requer muito 
 - Criar banco de dados no Mysql Server com nome `db_pestana`;
 - Criar arquivo `.env` na raiz do projeto, após isso adicionar essas variáveis:
     - DB_NAME=db_pestana
-    - DB_USER='root' ou  usuário padrão do banco de dados.
-    - DB_PASSWORD='03delend@#' ou senha padrão do banco de dados.
+    - DB_USER='usuário padrão do banco de dados'
+    - DB_PASSWORD='senha padrão do banco de dados'
     - DB_HOST='localhost'
 - Inicie o servidor com `npm start`
 
